@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "actors")
-public class ActorController {
+@RequestMapping(value = "athletes")
+public class AthleteController {
 
-    @Autowired
-    AthleteRepository athleteRepository;
+    private final AthleteRepository athleteRepository;
+
+    public AthleteController(AthleteRepository athleteRepository) {
+        this.athleteRepository = athleteRepository;
+    }
 
     @GetMapping
     public List<Athlete> getActors() {
