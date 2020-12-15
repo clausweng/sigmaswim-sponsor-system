@@ -15,7 +15,9 @@ const routes: Routes = [
     path: 'typography',
     pathMatch: 'full',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule)
+    loadChildren: () => {
+      return import('./pages/typography/typography.module').then(m => m.TypographyModule);
+    }
   },
   {
     path: 'tables',
