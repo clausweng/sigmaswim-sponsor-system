@@ -1,5 +1,5 @@
 create table company (
-    id bigint not null AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY ,
     ref varchar(50) not null,
     name varchar(255) not null,
     address1 varchar(255),
@@ -7,7 +7,5 @@ create table company (
     zip int not null,
     city varchar(255),
     email varchar(255),
-    mobile varchar(20),
-    primary key (id)
+    mobile varchar(20)
 );
-ALTER TABLE company AUTO_INCREMENT = 1;

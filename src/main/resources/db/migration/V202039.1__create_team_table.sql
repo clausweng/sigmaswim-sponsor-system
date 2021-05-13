@@ -1,7 +1,5 @@
 create table team (
-    id bigint not null AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY,
     ref varchar(10) not null,
-    name varchar(255) not null,
-    primary key (id)
+    name varchar(255) not null
 );
-ALTER TABLE team AUTO_INCREMENT = 1;
