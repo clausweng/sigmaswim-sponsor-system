@@ -12,12 +12,10 @@ const routes: Routes = [
     component: DashboardPageComponent
   },
   {
-    path: 'typography',
+    path: 'athlete',
     pathMatch: 'full',
     canActivate: [AuthGuard],
-    loadChildren: () => {
-      return import('./pages/typography/typography.module').then(m => m.TypographyModule);
-    }
+    loadChildren: () => import('./pages/athlete/athlete.module').then(m => m.AthleteModule)
   },
   {
     path: 'tables',
@@ -53,9 +51,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
-      preloadingStrategy: PreloadAllModules
-    })
+    useHash: true,
+    preloadingStrategy: PreloadAllModules,
+    relativeLinkResolution: 'legacy'
+})
   ],
   exports: [RouterModule]
 })

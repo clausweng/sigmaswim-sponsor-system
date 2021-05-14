@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { TypographyPageComponent } from './containers';
+import { AthletePageComponent } from './containers';
 
 const routes: Routes = [
   {
     path: '',
-    component: TypographyPageComponent
+    component: AthletePageComponent
   }
 ];
 
@@ -17,5 +17,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class TypographyRoutingModule {
+export class AthleteRoutingModule {
 }
